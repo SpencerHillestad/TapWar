@@ -1,25 +1,190 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="azO-xL-BW8">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
+        <!--First View Controller-->
+        <scene sceneID="Ikz-dB-PCj">
+            <objects>
+                <viewController id="azO-xL-BW8" customClass="FirstViewController" customModule="TapWar_final_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CeT-Q6-pJK"/>
+                        <viewControllerLayoutGuide type="bottom" id="qJh-MQ-smh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dJX-fc-Ili">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pu1-RY-gPS">
+                                <rect key="frame" x="81" y="262" width="140" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.098016447460000003" blue="0.09448256964" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="azO-xL-BW8" id="TEH-W0-0oM"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iwB-5J-hDI">
+                                <rect key="frame" x="81" y="224" width="140" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="azO-xL-BW8" id="PgI-38-dAf"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tap War!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJe-8o-wQP">
+                                <rect key="frame" x="0.0" y="28" width="320" height="138"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="77"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2X-o3-lLe">
+                                <rect key="frame" x="75" y="370" width="152" height="115"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="66"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="regularTapWar" animates="NO" id="DAS-4c-jUm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="e2X-o3-lLe" firstAttribute="centerX" secondItem="dJX-fc-Ili" secondAttribute="centerX" id="EcN-Y0-X4K"/>
+                            <constraint firstItem="pu1-RY-gPS" firstAttribute="centerX" secondItem="dJX-fc-Ili" secondAttribute="centerX" id="Smu-hs-DU5"/>
+                            <constraint firstItem="iwB-5J-hDI" firstAttribute="centerX" secondItem="dJX-fc-Ili" secondAttribute="centerX" id="dSP-LB-tpz"/>
+                            <constraint firstItem="KJe-8o-wQP" firstAttribute="centerX" secondItem="dJX-fc-Ili" secondAttribute="centerX" id="yj8-8d-xsp"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="nameView1" destination="iwB-5J-hDI" id="HdB-qT-ldV"/>
+                        <outlet property="nameView2" destination="pu1-RY-gPS" id="unx-4H-azo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lE8-6g-Gi3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-135" y="265"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TapWar_final_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vu-IG-gMk">
+                                <rect key="frame" x="137" y="269" width="46" height="30"/>
+                                <connections>
+                                    <segue destination="azO-xL-BW8" kind="show" identifier="backToMenu" id="ZFF-ab-ga5"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v4f-Te-wjK">
+                                <rect key="frame" x="0.0" y="286" width="320" height="282"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kj-YR-Ln2">
+                                        <rect key="frame" x="4" y="8" width="312" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vco-1q-MEE">
+                                        <rect key="frame" x="60" y="38" width="201" height="117"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="85"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.098016447460000003" blue="0.09448256964" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="Vco-1q-MEE" firstAttribute="centerX" secondItem="v4f-Te-wjK" secondAttribute="centerX" id="NBZ-H7-FRw"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="lxN-tl-dUN" appends="YES" id="w8W-Nn-hq0"/>
+                                    <outletCollection property="gestureRecognizers" destination="1AZ-qu-2L3" appends="YES" id="bZk-Xa-NYA"/>
+                                </connections>
+                            </view>
+                            <view alpha="0.75" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q5O-Te-Y2J">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="286"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WF1-iX-Y1C">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="569"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="57"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThX-D4-2Ms">
+                                        <rect key="frame" x="0.0" y="257" width="312" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BT8-bD-qA2">
+                                        <rect key="frame" x="54" y="122" width="205" height="127"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="86"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="BT8-bD-qA2" firstAttribute="centerX" secondItem="Q5O-Te-Y2J" secondAttribute="centerX" id="74F-vD-1cU"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jfh-8K-APR" appends="YES" id="xgJ-Ee-eAR"/>
+                                    <outletCollection property="gestureRecognizers" destination="N6B-jN-7YD" appends="YES" id="WKg-oM-nb5"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="blueGesture" destination="jfh-8K-APR" id="3a2-kk-KSc"/>
+                        <outlet property="blueLbl" destination="BT8-bD-qA2" id="tlg-sO-oSB"/>
+                        <outlet property="greyLbl" destination="Vco-1q-MEE" id="o3W-x9-MSx"/>
+                        <outlet property="menuButton" destination="8vu-IG-gMk" id="LQu-XG-PKP"/>
+                        <outlet property="nameLblBlue" destination="ThX-D4-2Ms" id="FjN-ez-gKf"/>
+                        <outlet property="nameLblRed" destination="0kj-YR-Ln2" id="cko-dK-aSl"/>
+                        <outlet property="redGesture" destination="lxN-tl-dUN" id="ILx-qA-Q1P"/>
+                        <outlet property="timerLbl" destination="WF1-iX-Y1C" id="Qpy-3R-HUO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer enabled="NO" id="jfh-8K-APR" userLabel="Tap Gesture RecognizerBlue">
+                    <connections>
+                        <action selector="blueTap:" destination="BYZ-38-t0r" id="rVG-sW-BCX"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer enabled="NO" id="lxN-tl-dUN" userLabel="Tap Gesture RecognizerRed">
+                    <connections>
+                        <action selector="redTap:" destination="BYZ-38-t0r" id="Snp-Gl-rSY"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1" id="1AZ-qu-2L3" userLabel="RedLong Press Gesture Recognizer">
+                    <connections>
+                        <action selector="RedLong:" destination="BYZ-38-t0r" id="0Zg-w1-JXo"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1" id="N6B-jN-7YD" userLabel="BlueLong Press Gesture Recognizer">
+                    <connections>
+                        <action selector="BlueLong:" destination="BYZ-38-t0r" id="o8F-pA-Lbh"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="DPj-ye-gEC"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="244" y="265"/>
         </scene>
     </scenes>
 </document>
